@@ -1,0 +1,12 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Scratch / Temp files
+*.tmp
+*.log
+
+# Netlify drop build artifacts (source code is in root)
+netlify/
+*.zip

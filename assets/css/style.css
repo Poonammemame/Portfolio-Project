@@ -1,0 +1,967 @@
+/* ==========================================================================
+   POONAM MEMANE - PORTFOLIO STYLESHEET
+   Clean, Modular, and Simple-to-Understand CSS Architecture
+   Technologies: CSS3 (Variables, Flexbox, Grid, Transitions) & Bootstrap 5
+   
+   TABLE OF CONTENTS:
+   1.  CSS Variables & Theming (Light/Dark Mode)
+   2.  Global Base Styles & Typography
+   3.  Header & Sticky Navbar
+   4.  Hero Section & Live Typing Animation
+   5.  Reusable Section Titles & Cards
+   6.  Technical Skills Section
+   7.  Experience & Training Timeline
+   8.  Featured Projects Section
+   9.  Certifications & Research Gallery (Filters & Cards)
+   10. Education Section
+   11. Contact Section, Form & Toast Notifications
+   12. Footer & Back-to-Top Button
+   13. Responsive Media Queries (Mobile & Tablet)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS VARIABLES & THEMING (LIGHT / DARK MODE)
+   - Defines reusable color tokens.
+   - When 'data-bs-theme="dark"' is set on <html>, the colors invert seamlessly.
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Accent Colors */
+  --primary-color: #2563eb;         /* Vibrant blue for links & buttons */
+  --primary-hover: #1d4ed8;         /* Deeper blue for hover states */
+  --primary-subtle: #eff6ff;        /* Light blue tint for badges & active states */
+  --accent-color: #0d9488;          /* Teal accent */
+
+  /* Neutral Surface & Background Colors (Light Mode default) */
+  --bg-body: #ffffff;               /* Main background */
+  --bg-surface: #f8fafc;            /* Light gray alternate section background */
+  --bg-card: #ffffff;               /* Card background */
+  --text-main: #0f172a;             /* Dark slate for readable headings & text */
+  --text-muted: #64748b;            /* Secondary muted text */
+  --border-color: #e2e8f0;          /* Clean subtle borders */
+
+  /* Shadows and Transitions */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 10px 25px rgba(37, 99, 235, 0.15);
+  --transition-fast: all 0.25s ease-in-out;
+}
+
+/* Dark Mode Overrides */
+[data-bs-theme="dark"] {
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-subtle: #1e293b;
+  --accent-color: #14b8a6;
+
+  --bg-body: #0b1120;               /* Deep slate dark background */
+  --bg-surface: #111827;            /* Slightly lighter dark surface */
+  --bg-card: #1e293b;               /* Dark card background */
+  --text-main: #f8fafc;             /* Crisp white text */
+  --text-muted: #94a3b8;            /* Soft slate gray */
+  --border-color: #334155;          /* Subtle dark border */
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 10px 25px rgba(59, 130, 246, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL BASE STYLES & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;          /* Prevents sticky navbar from overlapping sections */
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.7;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+/* Reusable section spacing */
+.section-padding {
+  padding: 85px 0;
+}
+
+.section-bg-surface {
+  background-color: var(--bg-surface);
+}
+
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary-color);
+  background-color: var(--primary-subtle);
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.section-description {
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. HEADER & STICKY NAVBAR
+   -------------------------------------------------------------------------- */
+.custom-navbar {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+  padding: 14px 0;
+}
+
+[data-bs-theme="dark"] .custom-navbar {
+  background-color: rgba(11, 17, 32, 0.92);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-scrolled {
+  box-shadow: var(--shadow-md);
+  padding: 10px 0;
+}
+
+.brand-text {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--text-main) !important;
+  letter-spacing: -0.5px;
+}
+
+.brand-accent {
+  color: var(--primary-color);
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-muted) !important;
+  padding: 8px 12px !important;
+  border-radius: 8px;
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+  background-color: var(--primary-subtle);
+}
+
+/* Theme Toggle Button */
+.btn-theme-toggle {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-theme-toggle:hover {
+  background: var(--primary-subtle);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO SECTION & LIVE TYPING ANIMATION
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding: 125px 0 85px 0;
+  background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 60%);
+}
+
+.hero-profile-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
+}
+
+.hero-status-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 6px 14px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background-color: #16a34a;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+.hero-badge-intro {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background-color: var(--primary-subtle);
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero-role-text {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.typing-text {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.typing-cursor {
+  font-weight: 300;
+  color: var(--primary-color);
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.social-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  transition: var(--transition-fast);
+}
+
+.social-icon-btn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* --------------------------------------------------------------------------
+   5. REUSABLE CARDS & ABOUT SECTION
+   -------------------------------------------------------------------------- */
+.about-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 32px;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.about-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.about-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.soft-skill-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 4px;
+  color: var(--text-main);
+}
+
+.about-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-info-list li:last-child {
+  border-bottom: none;
+}
+
+.about-info-list i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   6. TECHNICAL SKILLS SECTION
+   -------------------------------------------------------------------------- */
+.skill-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 26px;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.skill-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.skill-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--primary-subtle);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.skill-header h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-fast);
+}
+
+.skill-tag i {
+  color: var(--primary-color);
+}
+
+.skill-tag:hover {
+  background-color: var(--primary-subtle);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* --------------------------------------------------------------------------
+   7. EXPERIENCE & TRAINING TIMELINE
+   -------------------------------------------------------------------------- */
+.timeline-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.timeline-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.timeline-badge {
+  display: inline-block;
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.timeline-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.timeline-duties {
+  padding-left: 20px;
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.timeline-duties li {
+  margin-bottom: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   8. FEATURED PROJECTS SECTION
+   -------------------------------------------------------------------------- */
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.project-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-category {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.tech-badge {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 15px;
+}
+
+.project-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   9. CERTIFICATIONS & RESEARCH GALLERY (FILTERS & CARDS)
+   -------------------------------------------------------------------------- */
+.cert-filter-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.cert-filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.cert-filter-btn:hover,
+.cert-filter-btn.active {
+  background: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.cert-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.cert-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  cursor: pointer;
+}
+
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-img {
+  transform: scale(1.05);
+}
+
+.cert-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-fast);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  gap: 8px;
+}
+
+.cert-img-wrapper:hover .cert-img-overlay {
+  opacity: 1;
+}
+
+.cert-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cert-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+
+.badge-research {
+  background: rgba(13, 148, 136, 0.15);
+  color: #0d9488;
+}
+
+.badge-cert {
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--primary-color);
+}
+
+.badge-hackathon {
+  background: rgba(234, 88, 12, 0.15);
+  color: #ea580c;
+}
+
+.cert-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.cert-issuer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.cert-meta {
+  margin-top: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   10. EDUCATION SECTION
+   -------------------------------------------------------------------------- */
+.education-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.education-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.education-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.education-inst {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.education-grade-badge {
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.education-years {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   11. CONTACT SECTION, FORM & TOAST NOTIFICATIONS
+   -------------------------------------------------------------------------- */
+.contact-info-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.contact-info-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: var(--primary-subtle);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.contact-details h5 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-details p {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.contact-form-container {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-control {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  background-color: var(--bg-surface);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  color: var(--text-main);
+}
+
+/* --------------------------------------------------------------------------
+   12. FOOTER & BACK-TO-TOP BUTTON
+   -------------------------------------------------------------------------- */
+.footer {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: 35px 0;
+  text-align: center;
+}
+
+.btn-scroll-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-fast);
+}
+
+.btn-scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-scroll-top:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   13. RESPONSIVE MEDIA QUERIES (MOBILE-FIRST TUNING)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .hero-name {
+    font-size: 2.3rem;
+  }
+  .hero-profile-container {
+    width: 230px;
+    height: 230px;
+    margin-bottom: 30px;
+  }
+  .section-padding {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .cert-img-wrapper {
+    height: 180px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-name {
+    font-size: 1.9rem;
+  }
+  .hero-role-text {
+    font-size: 1.1rem;
+  }
+  .contact-form-container {
+    padding: 22px;
+  }
+  .cert-filter-btn {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}

@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poonam Memane | Java Full Stack Developer &amp; Software Engineer</title>
+  
+  <!-- SEO & Social Sharing Metadata -->
+  <meta name="description" content="Personal Portfolio of Poonam Memane - Computer Engineering Graduate and Java Full Stack Developer experienced in Java, Spring Boot, REST APIs, SQL, HTML, CSS, Bootstrap, and JavaScript.">
+  <meta name="keywords" content="Poonam Memane, Java Full Stack Developer, Spring Boot, Software Engineer, Pune, Web Development, Portfolio">
+  <meta name="author" content="Poonam Memane">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS (Local Vendor File with CDN Fallback) -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+  <!-- Custom Modular Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       SECTION 1: NAVBAR (STICKY HEADER)
+       - Bootstrap 5 .navbar with .fixed-top for smooth sticky navigation.
+       - .navbar-expand-lg for clean desktop menu & mobile hamburger drawer.
+       - Pure Vanilla JS Dark/Light mode theme switcher.
+       ========================================================================= -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+      <div class="container">
+        
+        <!-- Brand Logo / Name -->
+        <a class="navbar-brand brand-text" href="#hero">
+          Poonam <span class="brand-accent">Memane</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#hero"><i class="bi bi-house me-1"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about"><i class="bi bi-person me-1"></i> About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills"><i class="bi bi-cpu me-1"></i> Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience"><i class="bi bi-briefcase me-1"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects"><i class="bi bi-code-slash me-1"></i> Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#certifications"><i class="bi bi-award me-1"></i> Certifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education"><i class="bi bi-mortarboard me-1"></i> Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i> Contact</a>
+            </li>
+            
+            <!-- Dark / Light Mode Switcher Button -->
+            <li class="nav-item ms-lg-2 my-2 my-lg-0">
+              <button class="btn-theme-toggle" id="themeToggleBtn" type="button" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+                <i class="bi bi-moon-stars"></i>
+              </button>
+            </li>
+
+            <!-- Direct Contact CTA -->
+            <li class="nav-item ms-lg-2">
+              <a href="#contact" class="btn btn-primary rounded-pill px-4 fw-semibold text-white">
+                <i class="bi bi-send me-1"></i> Hire Me
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =========================================================================
+         SECTION 2: HERO SECTION
+         - 2-Column Responsive Bootstrap Grid (col-lg-7 text + col-lg-5 photo).
+         - Vanilla JS typewriter animation for roles.
+         - Quick CTAs and professional social links (GitHub, LinkedIn, LeetCode, Email, Phone).
+         ========================================================================= -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          
+          <!-- Text Introduction -->
+          <div class="col-lg-7 order-2 order-lg-1">
+            <span class="hero-badge-intro">
+              <i class="bi bi-code-square"></i> Welcome to My Portfolio
+            </span>
+            <h1 class="hero-name">
+              Hi, I'm <span class="brand-accent">Poonam Memane</span>
+            </h1>
+            <p class="hero-role-text">
+              I am a <span class="typing-text">Java Full Stack Developer</span><span class="typing-cursor">|</span>
+            </p>
+            <p class="hero-lead">
+              Computer Engineering graduate with 6 months of Java Full Stack Development internship experience. Skilled in Java, Spring Boot, REST APIs, SQL, and responsive frontend engineering with HTML, CSS, Bootstrap, and JavaScript.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#projects" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                <i class="bi bi-laptop me-2"></i> View Projects
+              </a>
+              <a href="#certifications" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold">
+                <i class="bi bi-award me-2"></i> Certifications
+              </a>
+              <a href="#contact" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-semibold">
+                <i class="bi bi-envelope me-2"></i> Contact Me
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials">
+              <a href="https://github.com/Poonammemame" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/poonam-memane-441338287" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://leetcode.com/u/Poonam_Memane/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LeetCode Profile">
+                <i class="bi bi-code-slash"></i>
+              </a>
+              <a href="mailto:pmemane2612@gmail.com" class="social-icon-btn" title="Email Me">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+              <a href="tel:+919139478214" class="social-icon-btn" title="Call Me">
+                <i class="bi bi-telephone-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Profile Photo with Active Status -->
+          <div class="col-lg-5 order-1 order-lg-2 text-center">
+            <div class="hero-profile-container">
+              <img src="assets/img/poonam.jpeg" alt="Poonam Memane" class="hero-img">
+              <div class="hero-status-badge">
+                <span class="status-dot"></span> Open to Work
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: ABOUT ME
+         - Professional summary matching resume credentials.
+         - Core soft skills and quick highlight metrics.
+         ========================================================================= -->
+    <section id="about" class="section-padding section-bg-surface">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Get to know me</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-description">
+            Passionate software developer interested in building scalable, user-friendly web applications, developing RESTful services, and continuously learning modern technologies.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          
+          <!-- Professional Summary Card -->
+          <div class="col-lg-7">
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="bi bi-person-lines-fill"></i>
+              </div>
+              <h3 class="h4 fw-bold mb-3">Professional Summary</h3>
+              <p class="text-secondary leading-relaxed mb-4">
+                Computer Engineering graduate with 6 months of Java Full Stack Development internship experience. Skilled in <strong>Java, SQL, HTML, CSS, Bootstrap, and JavaScript</strong>. Familiar with <strong>Spring Boot, REST APIs, MySQL</strong>, and responsive web design. Interested in developing user-friendly web applications and learning new technologies.
+              </p>
+              <p class="text-secondary leading-relaxed mb-4">
+                During my internship at <strong>Mavertech Technologies</strong> and intensive technical training at <strong>Giri's Tech Hub</strong>, I developed strong core foundations in object-oriented programming, API architecture, database queries, and modular frontend components.
+              </p>
+
+              <!-- Soft Skills -->
+              <h5 class="fw-bold fs-6 mb-2 text-uppercase text-muted">Key Strengths &amp; Soft Skills:</h5>
+              <div>
+                <span class="soft-skill-badge"><i class="bi bi-check-circle-fill text-primary me-1"></i> Problem-Solving</span>
+                <span class="soft-skill-badge"><i class="bi bi-check-circle-fill text-primary me-1"></i> Leadership</span>
+                <span class="soft-skill-badge"><i class="bi bi-check-circle-fill text-primary me-1"></i> Time Management</span>
+                <span class="soft-skill-badge"><i class="bi bi-check-circle-fill text-primary me-1"></i> Adaptability</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Details / Highlights Card -->
+          <div class="col-lg-5">
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="bi bi-info-circle-fill"></i>
+              </div>
+              <h3 class="h4 fw-bold mb-3">Quick Profile Highlights</h3>
+              
+              <ul class="list-unstyled about-info-list mb-4">
+                <li>
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <div>
+                    <strong>Location:</strong>
+                    <div class="text-secondary">Pune, Maharashtra, India</div>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-mortarboard-fill"></i>
+                  <div>
+                    <strong>Bachelor's Degree:</strong>
+                    <div class="text-secondary">B.E. Computer Engineering (CGPA: 7.29)</div>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-award-fill"></i>
+                  <div>
+                    <strong>Diploma:</strong>
+                    <div class="text-secondary">Computer Technology (86.29%)</div>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-briefcase-fill"></i>
+                  <div>
+                    <strong>Experience:</strong>
+                    <div class="text-secondary">6 Months Java Full Stack Developer Intern</div>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-translate"></i>
+                  <div>
+                    <strong>Languages:</strong>
+                    <div class="text-secondary">English, Hindi, Marathi</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="pt-2 border-top">
+                <a href="#contact" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">
+                  <i class="bi bi-chat-dots me-1"></i> Get in Touch
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: TECHNICAL SKILLS
+         - Bootstrap 5 responsive grid (.row-cols-1 .row-cols-md-2 .row-cols-lg-3).
+         - Categorized strictly matching technical strengths: Programming Languages,
+           Backend, Frontend, Database, Tools & Platforms, and Deployment.
+         ========================================================================= -->
+    <section id="skills" class="section-padding">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-subtitle">What I bring to the table</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-description">
+            A comprehensive overview of my technical stack across programming languages, backend frameworks, database management, and modern web development tools.
+          </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          
+          <!-- 1. Programming Languages -->
+          <div class="col">
+            <div class="skill-box">
+              <div class="skill-header">
+                <div class="skill-icon-wrap"><i class="bi bi-code-slash"></i></div>
+                <h4>Programming Languages</h4>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Core Java (OOP)</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> SQL</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Collections Framework</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Multithreading</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Exception Handling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Backend Technologies -->
+          <div class="col">
+            <div class="skill-box">
+              <div class="skill-header">
+                <div class="skill-icon-wrap"><i class="bi bi-gear-fill"></i></div>
+                <h4>Backend Technologies</h4>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Spring Boot</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> RESTful APIs</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Spring Framework</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Spring Security</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> JPA / Hibernate</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> JDBC</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Servlets</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Frontend Technologies -->
+          <div class="col">
+            <div class="skill-box">
+              <div class="skill-header">
+                <div class="skill-icon-wrap"><i class="bi bi-window-sidebar"></i></div>
+                <h4>Frontend Technologies</h4>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> HTML5</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> CSS3</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Bootstrap 5</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> JavaScript (ES6+)</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> React.js (Basic)</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Responsive UI Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Database -->
+          <div class="col">
+            <div class="skill-box">
+              <div class="skill-header">
+                <div class="skill-icon-wrap"><i class="bi bi-database-fill"></i></div>
+                <h4>Database Management</h4>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> MySQL</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Relational Database Design</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Complex Queries &amp; Joins</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> CRUD Operations</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Database Indexing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Tools & Platforms -->
+          <div class="col">
+            <div class="skill-box">
+              <div class="skill-header">
+                <div class="skill-icon-wrap"><i class="bi bi-tools"></i></div>
+                <h4>Tools &amp; Platforms</h4>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Spring Tool Suite (STS)</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Eclipse IDE</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> VS Code</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Postman</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Swagger UI</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Maven</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Git &amp; GitHub</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Linux Basics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Deployment & Architecture -->
+          <div class="col">
+            <div class="skill-box">
+              <div class="skill-header">
+                <div class="skill-icon-wrap"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+                <h4>Deployment &amp; Hosting</h4>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Netlify Deployment</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> Wix Hosting</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> MVC Architecture</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> REST Architecture</span>
+                <span class="skill-tag"><i class="bi bi-check-lg"></i> JSON Web Tokens (JWT)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: PROFESSIONAL EXPERIENCE & TRAINING
+         - 6 Months Java Full Stack Developer Intern at Mavertech Technologies.
+         - Intensive Training at Giri's Tech Hub.
+         ========================================================================= -->
+    <section id="experience" class="section-padding section-bg-surface">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Career Path</span>
+          <h2 class="section-title">Experience &amp; Training</h2>
+          <p class="section-description">
+            Industry internship experience developing enterprise Java applications alongside intensive full-stack technical training.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Professional Internship: Mavertech Technologies -->
+          <div class="col-lg-6">
+            <div class="timeline-card">
+              <span class="timeline-badge"><i class="bi bi-briefcase me-1"></i> Industry Experience</span>
+              <h3 class="timeline-title">Java Full Stack Developer Intern</h3>
+              <div class="timeline-company">Mavertech Technologies, Nashik</div>
+              <div class="timeline-meta">
+                <span><i class="bi bi-calendar-event me-1"></i> May 2026 – October 2026 (6 Months)</span>
+                <span><i class="bi bi-geo-alt me-1"></i> Nashik, India</span>
+              </div>
+              <ul class="timeline-duties">
+                <li>Contributed to full-stack application development using Core Java, Spring Boot, SQL, and web technologies.</li>
+                <li>Developed backend functionality and integrated RESTful APIs with MySQL for database operations.</li>
+                <li>Tested REST APIs using Postman and verified responses and database operations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Professional Training: Giri's Tech Hub -->
+          <div class="col-lg-6">
+            <div class="timeline-card">
+              <span class="timeline-badge"><i class="bi bi-mortarboard me-1"></i> Specialized Training</span>
+              <h3 class="timeline-title">Java Full Stack Development Training</h3>
+              <div class="timeline-company">Giri's Tech Hub, Pune</div>
+              <div class="timeline-meta">
+                <span><i class="bi bi-calendar-event me-1"></i> 2025 – 2026</span>
+                <span><i class="bi bi-geo-alt me-1"></i> Pune, India</span>
+              </div>
+              <ul class="timeline-duties">
+                <li>Comprehensive hands-on training in Core Java, Object-Oriented Programming (OOP), Multithreading, and Collections Framework.</li>
+                <li>Deep-dive implementation of Spring Boot, Spring Data JPA, RESTful Web Services, and Spring Security.</li>
+                <li>Database modeling with MySQL, JDBC connectivity, and end-to-end integration with modern responsive frontend interfaces.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: FEATURED PROJECTS
+         - Displays 2 featured real-world projects with live links and GitHub repositories.
+         ========================================================================= -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Real-world applications</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">
+            Production-ready backend and frontend projects showcasing software engineering, API development, and responsive design.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Project 1: Smart Career Recommendation & Online Assessment System -->
+          <div class="col-lg-6">
+            <div class="project-card">
+              <div class="project-body">
+                <span class="project-category">Java &amp; Spring Boot Web Application</span>
+                <h3 class="project-title">Smart Career Recommendation &amp; Online Assessment System</h3>
+                <p class="project-desc">
+                  A comprehensive web-based platform that recommends suitable career paths based on users' skills, interests, and assessment performance. Features secure role-based access control and automated evaluation.
+                </p>
+
+                <ul class="text-secondary small ps-3 mb-3">
+                  <li class="mb-1">Implemented user and admin modules, JWT-based authentication, and online assessment management features.</li>
+                  <li class="mb-1">Developed RESTful APIs using Spring Boot and integrated MySQL database operations using JDBC.</li>
+                  <li>Tested API endpoints using Postman and Swagger for error-free production deployment.</li>
+                </ul>
+
+                <!-- Tech Badges -->
+                <div class="project-tech-stack">
+                  <span class="tech-badge">Java</span>
+                  <span class="tech-badge">Spring Boot</span>
+                  <span class="tech-badge">REST APIs</span>
+                  <span class="tech-badge">Spring Security</span>
+                  <span class="tech-badge">JWT</span>
+                  <span class="tech-badge">MySQL</span>
+                  <span class="tech-badge">JSP</span>
+                  <span class="tech-badge">JDBC</span>
+                  <span class="tech-badge">Maven</span>
+                  <span class="tech-badge">Postman</span>
+                </div>
+
+                <!-- Action Links -->
+                <div class="project-footer">
+                  <a href="https://smartcareerpath.co.in" target="_blank" rel="noopener noreferrer" class="btn btn-primary rounded-pill btn-sm px-3 fw-semibold">
+                    <i class="bi bi-box-arrow-up-right me-1"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/Poonammemame/smartcareerproject" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark rounded-pill btn-sm px-3 fw-semibold">
+                    <i class="bi bi-github me-1"></i> GitHub Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Personal Portfolio Website -->
+          <div class="col-lg-6">
+            <div class="project-card">
+              <div class="project-body">
+                <span class="project-category">Frontend &amp; Responsive Web Design</span>
+                <h3 class="project-title">Personal Portfolio Website</h3>
+                <p class="project-desc">
+                  Developed responsive personal portfolio websites to showcase skills, resume, projects, and verified certifications across desktop and mobile devices.
+                </p>
+
+                <ul class="text-secondary small ps-3 mb-3">
+                  <li class="mb-1">Crafted with modern HTML5 semantic elements and clean Bootstrap 5 12-column flexbox grid.</li>
+                  <li class="mb-1">Includes live JavaScript typing animation, dark/light mode toggle with localStorage persistence, and active navigation scroll tracking.</li>
+                  <li>Optimized for speed, SEO, cross-browser compatibility, and deployed live on Netlify and Wix.</li>
+                </ul>
+
+                <!-- Tech Badges -->
+                <div class="project-tech-stack">
+                  <span class="tech-badge">HTML5</span>
+                  <span class="tech-badge">CSS3</span>
+                  <span class="tech-badge">Bootstrap 5</span>
+                  <span class="tech-badge">JavaScript (ES6+)</span>
+                  <span class="tech-badge">Netlify</span>
+                  <span class="tech-badge">Wix</span>
+                </div>
+
+                <!-- Action Links -->
+                <div class="project-footer">
+                  <a href="https://poonammemane-portfolio.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary rounded-pill btn-sm px-3 fw-semibold">
+                    <i class="bi bi-globe me-1"></i> Netlify Demo
+                  </a>
+                  <a href="https://poonammemane6.wixsite.com/my-site-1" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary rounded-pill btn-sm px-3 fw-semibold">
+                    <i class="bi bi-window me-1"></i> Wix Site
+                  </a>
+                  <a href="https://github.com/Poonammemame/web-development-project" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark rounded-pill btn-sm px-3 fw-semibold">
+                    <i class="bi bi-github me-1"></i> GitHub Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: CERTIFICATIONS & RESEARCH PUBLICATIONS
+         - Verified credentials, peer-reviewed international publications, and hackathons.
+         - Vanilla JS Category Filter buttons.
+         - Click any card to preview full certificate in a modal!
+         ========================================================================= -->
+    <section id="certifications" class="section-padding section-bg-surface">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Verified Achievements</span>
+          <h2 class="section-title">Certifications &amp; Research</h2>
+          <p class="section-description">
+            Verified industry certifications, international journal research papers, and national hackathons. Click any certificate to view in full resolution.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="cert-filter-wrap">
+          <button type="button" class="cert-filter-btn active" data-filter="all">All Credentials (10)</button>
+          <button type="button" class="cert-filter-btn" data-filter="cert">Certifications</button>
+          <button type="button" class="cert-filter-btn" data-filter="research">Research Publications</button>
+          <button type="button" class="cert-filter-btn" data-filter="hackathon">Hackathons &amp; Contests</button>
+        </div>
+
+        <!-- Certificate Cards Grid -->
+        <div class="row g-4" id="certGrid">
+          
+          <!-- 1. Infosys Artificial Intelligence Certification -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="cert">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/infosys.jpeg" 
+                   data-title="Artificial Intelligence Certification" 
+                   data-desc="Infosys Foundation Finishing School for Employability Program (ICT Academy) - Grade B">
+                <img src="assets/img/portfolio/infosys.jpeg" alt="Infosys AI Certification" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Certificate
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-cert">Certification</span>
+                <h4 class="cert-title">Artificial Intelligence Certification</h4>
+                <p class="cert-issuer">Infosys Foundation Finishing School (ICT Academy)</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-award-fill text-warning me-1"></i> Grade B</span>
+                  <span>Jan – Feb 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. IJIRID Research Publication -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="research">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/product-1.jpeg" 
+                   data-title="Research Paper: Earthquake &amp; Flood Prediction" 
+                   data-desc="Published in International Journal IJIRID (Vol 3, Issue 5, Oct 2024) - DOI: 10.5281/zenodo.14010957">
+                <img src="assets/img/portfolio/product-1.jpeg" alt="IJIRID Research Paper Publication" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Paper
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-research">Research Publication</span>
+                <h4 class="cert-title">Earthquake &amp; Flood Prediction</h4>
+                <p class="cert-issuer">International Journal IJIRID (Vol 3, Issue 5)</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-journal-check text-primary me-1"></i> DOI: 10.5281/zenodo.14010957</span>
+                  <span>Oct 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. IJARESM Research Publication -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="research">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/ijaresm.jpeg" 
+                   data-title="GeoPredict Research Publication" 
+                   data-desc="Published in IJARESM Journal (Vol 13, Issue 4, Apr 2025) - Impact Factor: 8.536">
+                <img src="assets/img/portfolio/ijaresm.jpeg" alt="IJARESM Research Paper Publication" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Paper
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-research">Research Publication</span>
+                <h4 class="cert-title">GeoPredict Research Publication</h4>
+                <p class="cert-issuer">IJARESM Journal (Vol 13, Issue 4)</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-star-fill text-warning me-1"></i> Impact Factor: 8.536</span>
+                  <span>Apr 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Smart India Hackathon (SIH 2023) -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="hackathon">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/branding-1.jpeg" 
+                   data-title="Smart India Hackathon (SIH 2023)" 
+                   data-desc="Ministry of Education Innovation Cell, Govt. of India / ZCOER">
+                <img src="assets/img/portfolio/branding-1.jpeg" alt="Smart India Hackathon 2023" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Certificate
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-hackathon">National Hackathon</span>
+                <h4 class="cert-title">Smart India Hackathon (SIH 2023)</h4>
+                <p class="cert-issuer">Ministry of Education Innovation Cell, Govt. of India</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-trophy-fill text-warning me-1"></i> Participant</span>
+                  <span>2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. TechSaksham Generative AI -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="cert">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/techsaksham.jpeg" 
+                   data-title="Foundation Course on Generative AI" 
+                   data-desc="Microsoft &amp; SAP Joint CSR Initiative (TechSaksham / Edunet)">
+                <img src="assets/img/portfolio/techsaksham.jpeg" alt="TechSaksham Generative AI" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Certificate
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-cert">Certification</span>
+                <h4 class="cert-title">Foundation in Generative AI</h4>
+                <p class="cert-issuer">Microsoft &amp; SAP CSR (TechSaksham)</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-patch-check-fill text-primary me-1"></i> Certificate of Achievement</span>
+                  <span>2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Quizeethon - Flutter 2024 -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="hackathon">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/app-1.jpeg" 
+                   data-title="Quizeethon - Flutter 2024" 
+                   data-desc="Incubators by Core2Web, Pune - Quiz Competition Finalist">
+                <img src="assets/img/portfolio/app-1.jpeg" alt="Quizeethon Flutter 2024" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Certificate
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-hackathon">Contest Finalist</span>
+                <h4 class="cert-title">Quizeethon - Flutter 2024</h4>
+                <p class="cert-issuer">Core2Web Incubators, Pune</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-check-circle-fill text-success me-1"></i> Competition Finalist</span>
+                  <span>2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. MERN & MEAN Full-Stack Workshop -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="cert">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/workshop.jpeg" 
+                   data-title="MERN &amp; MEAN Full-Stack Workshop" 
+                   data-desc="iBase Electrosoft &amp; MSME, Government of India">
+                <img src="assets/img/portfolio/workshop.jpeg" alt="MERN &amp; MEAN Workshop" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Certificate
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-cert">Workshop</span>
+                <h4 class="cert-title">MERN &amp; MEAN Full-Stack</h4>
+                <p class="cert-issuer">iBase Electrosoft &amp; MSME, Govt. of India</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-award text-primary me-1"></i> Hands-on Training</span>
+                  <span>June 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. NP IT Solutions Web Development -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="cert">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/npit.jpeg" 
+                   data-title="Web Designing &amp; Development" 
+                   data-desc="NP IT Solutions, Nashik - Internship Training">
+                <img src="assets/img/portfolio/npit.jpeg" alt="NP IT Solutions Web Development" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Certificate
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-cert">Internship Training</span>
+                <h4 class="cert-title">Web Designing &amp; Development</h4>
+                <p class="cert-issuer">NP IT Solutions, Nashik</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-patch-check-fill text-success me-1"></i> Completed</span>
+                  <span>2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Emertxe IoT Internship -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="cert">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/emertxe.jpeg" 
+                   data-title="Internet of Things (IoT) Internship" 
+                   data-desc="Emertxe Information Technologies, Cohort-10">
+                <img src="assets/img/portfolio/emertxe.jpeg" alt="Emertxe IoT Internship" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Certificate
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-cert">Internship</span>
+                <h4 class="cert-title">IoT Internship (Cohort-10)</h4>
+                <p class="cert-issuer">Emertxe Information Technologies</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-cpu-fill text-info me-1"></i> Practical Project</span>
+                  <span>July 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. GPT Learning Python Seminar -->
+          <div class="col-lg-4 col-md-6 cert-col" data-category="cert">
+            <div class="cert-card">
+              <div class="cert-img-wrapper view-cert-trigger" 
+                   data-img-src="assets/img/portfolio/gpt-learning.jpeg" 
+                   data-title="Python &amp; IT Industry Exposure" 
+                   data-desc="GPT Learning in association with ZCOER">
+                <img src="assets/img/portfolio/gpt-learning.jpeg" alt="GPT Learning Python Seminar" class="cert-img">
+                <div class="cert-img-overlay">
+                  <i class="bi bi-zoom-in fs-4"></i> View Certificate
+                </div>
+              </div>
+              <div class="cert-content">
+                <span class="cert-badge badge-cert">Seminar</span>
+                <h4 class="cert-title">Python &amp; IT Industry Exposure</h4>
+                <p class="cert-issuer">GPT Learning &amp; ZCOER</p>
+                <div class="cert-meta">
+                  <span><i class="bi bi-code-slash text-dark me-1"></i> Seminar Certificate</span>
+                  <span>July 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 8: EDUCATION
+         - Bachelor of Computer Engineering (ZCOER) & Diploma in Computer Technology.
+         ========================================================================= -->
+    <section id="education" class="section-padding">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Academic Background</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-description">
+            Consistent academic excellence in Computer Engineering and Computer Technology foundations.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Degree: Zeal College of Engineering and Research -->
+          <div class="col-lg-6">
+            <div class="education-card">
+              <div class="education-header">
+                <div>
+                  <h3 class="education-title">Bachelor of Computer Engineering</h3>
+                  <div class="education-inst">Zeal College of Engineering and Research, Pune</div>
+                </div>
+                <span class="education-grade-badge">CGPA: 7.29</span>
+              </div>
+              <div class="education-years mb-3"><i class="bi bi-calendar3 me-1"></i> 2022 – 2025</div>
+              <p class="text-secondary small mb-0">
+                Core coursework in Object-Oriented Programming (Java), Data Structures &amp; Algorithms, Database Management Systems (DBMS), Operating Systems, Software Engineering, and Computer Networks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Diploma: Amrutvahini Polytechnic -->
+          <div class="col-lg-6">
+            <div class="education-card">
+              <div class="education-header">
+                <div>
+                  <h3 class="education-title">Diploma in Computer Technology</h3>
+                  <div class="education-inst">Amrutvahini Polytechnic, Sangamner</div>
+                </div>
+                <span class="education-grade-badge">86.29%</span>
+              </div>
+              <div class="education-years mb-3"><i class="bi bi-calendar3 me-1"></i> 2020 – 2022</div>
+              <p class="text-secondary small mb-0">
+                Built foundational software development knowledge in C, C++, Java, relational database modeling, and web fundamentals with high academic distinction.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 9: CONTACT ME
+         - Direct Contact Cards with 1-Click Copy and Toast alert.
+         - Working Contact Form that opens pre-filled email client.
+         ========================================================================= -->
+    <section id="contact" class="section-padding section-bg-surface">
+      <div class="container">
+        
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Let's connect</span>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-description">
+            I am actively looking for an entry-level Java Full Stack Developer / Software Developer role. Feel free to reach out directly or submit the message form below!
+          </p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Contact Information & Quick Actions -->
+          <div class="col-lg-5">
+            
+            <!-- Email Card -->
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div class="contact-details flex-grow-1">
+                <h5>Email</h5>
+                <p><a href="mailto:pmemane2612@gmail.com" class="text-primary text-break">pmemane2612@gmail.com</a></p>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary rounded-pill" onclick="copyToClipboard('pmemane2612@gmail.com', 'Email')" title="Copy Email">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div class="contact-details flex-grow-1">
+                <h5>Phone</h5>
+                <p><a href="tel:+919139478214" class="text-primary">+91-9139478214</a></p>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary rounded-pill" onclick="copyToClipboard('+919139478214', 'Phone Number')" title="Copy Phone">
+                <i class="bi bi-clipboard"></i>
+              </button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Location</h5>
+                <p>Pune, Maharashtra, India</p>
+              </div>
+            </div>
+
+            <!-- Social Profiles Card -->
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="bi bi-share-fill"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Social Profiles</h5>
+                <div class="d-flex flex-wrap gap-2 mt-1">
+                  <a href="https://github.com/Poonammemame" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark rounded-pill">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/poonam-memane-441338287" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill">
+                    <i class="bi bi-linkedin me-1"></i> LinkedIn
+                  </a>
+                  <a href="https://leetcode.com/u/Poonam_Memane/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-pill">
+                    <i class="bi bi-code-slash me-1"></i> LeetCode
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="col-lg-7">
+            <div class="contact-form-container">
+              <h3 class="h4 fw-bold mb-3">Send a Message</h3>
+              <p class="text-secondary small mb-4">
+                Have an opportunity or question? Submit this form to start a conversation.
+              </p>
+
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="senderName" class="form-label small fw-semibold">Your Name *</label>
+                    <input type="text" class="form-control" id="senderName" placeholder="e.g. Recruiter / HR" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="senderEmail" class="form-label small fw-semibold">Your Email *</label>
+                    <input type="email" class="form-control" id="senderEmail" placeholder="e.g. hr@company.com" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="emailSubject" class="form-label small fw-semibold">Subject *</label>
+                    <input type="text" class="form-control" id="emailSubject" placeholder="Interview Opportunity / Java Full Stack Developer Role" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="emailMessage" class="form-label small fw-semibold">Message *</label>
+                    <textarea class="form-control" id="emailMessage" rows="5" placeholder="Hi Poonam, we came across your portfolio and would love to discuss an opportunity..." required></textarea>
+                  </div>
+                  <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-primary rounded-pill px-5 py-2 fw-semibold">
+                      <i class="bi bi-send me-1"></i> Send Email
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       SECTION 10: FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <p class="mb-1 fw-semibold text-secondary">&copy; 2026 <strong>Poonam Memane</strong>. All Rights Reserved.</p>
+      <p class="small text-muted mb-0">Crafted with HTML5, CSS3, Bootstrap 5, and pure Vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll-to-Top Button -->
+  <button type="button" class="btn-scroll-top" id="scrollTopBtn" title="Back to Top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- =========================================================================
+       CERTIFICATE PREVIEW MODAL (BOOTSTRAP 5)
+       ========================================================================= -->
+  <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="certificateModalLabel">Certificate Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-3">
+          <img src="" id="certificateModalImg" class="img-fluid rounded border" alt="Certificate Preview">
+        </div>
+        <div class="modal-footer border-top justify-content-between">
+          <span class="text-muted small" id="certificateModalDesc"></span>
+          <button type="button" class="btn btn-secondary rounded-pill btn-sm px-4" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       TOAST NOTIFICATION (COPY CLIPBOARD FEEDBACK)
+       ========================================================================= -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090;">
+    <div id="copyToast" class="toast align-items-center text-bg-dark border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center gap-2">
+          <i class="bi bi-check-circle-fill text-success fs-5"></i>
+          <span id="toastMessage">Copied to clipboard!</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       JAVASCRIPT SCRIPTS
+       - Bootstrap 5 Bundle (contains Popper.js and modal/collapse controllers)
+       - Clean Vanilla JS script.js
+       ========================================================================= -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
